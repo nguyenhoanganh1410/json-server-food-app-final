@@ -1,0 +1,67 @@
+@baseUrl = http://localhost:3000/api
+
+# @name getAllCart
+GET {{baseUrl}}/cart
+
+
+####
+
+
+# @name addNewCart
+POST http://localhost:3000/api/cart?id=hoanganh141000tb@gmail.com
+Content-Type: application/json
+
+{
+   
+    "items": [
+      {
+        "id": "artisanal-bread-choose-your-own-3-pack",
+        "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/132332/artisanal-bread-choose-your-own-3-pack.c64d8dc0584457116b91a24f43cd861c.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
+        "name": "Orwashers Bakery",
+        "dsc": "Artisanal Bread - Choose Your Own 3 Pack",
+        "price": 45,
+        "rate": 5,
+        "country": "New York, NY",
+        "quatity": 2
+      }
+    ]
+  
+  }
+
+###
+# @name updateCart
+PATCH http://localhost:3000/api/cart/hoanganh1410tb@gmail.com
+Content-Type: application/json
+
+{
+     
+       "items": [
+       {
+        "id": "artisanal-bread-choose-your-own-3-pack",
+        "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/132332/artisanal-bread-choose-your-own-3-pack.c64d8dc0584457116b91a24f43cd861c.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
+        "name": "Orwashers Bakery",
+        "dsc": "Artisanal Bread - Choose Your Own 3 Pack",
+        "price": 45,
+        "rate": 5,
+        "country": "New York, NY",
+        "quatity": 2
+      },
+      {
+        "id": "choose-your-own-gourmet-breadsticks-16-pack",
+        "img": "https://goldbelly.imgix.net/uploads/showcase_media_asset/image/90781/choose-your-own-gourmet-breadsticks-16-pack.887e7e2eb8f22d3cd4d89f1a11affd5e.jpg?ixlib=react-9.0.2&auto=format&ar=1%3A1",
+        "name": "Claudio's Specialty Breads",
+        "dsc": "Choose Your Own Gourmet Breadsticks - 16 Pack",
+        "price": 119,
+        "rate": 4,
+        "country": "Castroville, CA",
+        "quatity": 4
+      }
+    ]
+      
+    
+}
+
+
+###
+# @name deleteCart
+DELETE http://localhost:3000/api/cart/localhost:3000/api/cart/hoanganh141000tb@gmail.com
